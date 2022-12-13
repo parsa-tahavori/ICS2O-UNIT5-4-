@@ -1,7 +1,7 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2022 Parsa Tahavori All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Parsa Tahavori
+// Created on: Dec 2022
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -10,14 +10,21 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test-use/sw.js", {
-    scope: "/ICS2O-PWA-Test-use/",
+  navigator.serviceWorker.register("/ICS2O-unit5-04-/sw.js", {
+    scope: "/ICS2O-unit5-04-/",
   })
 }
 
 /**
- * This function displays an alert.
+ * this function
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  const age = parseInt(document.getElementById("age").value)
+  const day = String(document.getElementById("day").value)
+
+  if (day == "thursday" || day == "tuesday" || (age > 12 && age < 21)) {
+    document.getElementById("answer").innerHTML = "You can get a discount!"
+  } else {
+    document.getElementById("answer").innerHTML = "You can't get a discount"
+  }
 }

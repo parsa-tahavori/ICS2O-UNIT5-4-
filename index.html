@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="My first PWA" />
     <meta name="keywords" content="mths, ics2o" />
-    <meta name="author" content="Mr. Coxall" />
+    <meta name="author" content="Parsa Tahavori" />
     <meta name="theme-color" content="#FFFFFF" />
     <title>GitHub page as PWA template</title>
-    <link rel="canonical" href="https://mr-coxall.github.io/ICS2O-PWA-Test/" />
-    <link rel="manifest" href="/ICS2O-PWA-Test-use/manifest.webmanifest" />
+    <link
+      rel="canonical"
+      href="https://parsa-tahavori.github.io/ICS2O-UNIT5-4-/"
+    />
+    <link rel="manifest" href="/ICS2O-UNIT5-4-/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
     <!--- None blocking for Lighthouse report --->
     <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
@@ -28,16 +31,14 @@
     </noscript>
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
-      media="none"
-      onload="if(media!='all')media='all'"
+      href="https://code.getmdl.io/1.3.0/material.pink-lime.min.css"
     />
     <noscript>
       <link
         rel="stylesheet"
         href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
       />
-    </noscript>
+     </noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -46,31 +47,63 @@
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
+    <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">My first PWA</span>
+          <span class="mdl-layout-title">hi</span>
+          <div class="mdl-layout-spacer"></div>
         </div>
       </header>
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
-        >
-          Say "Hello, World!"
-        </button>
-        <!-- basic text -->
-        <p></p>
-        <div id="hello-world"></div>
+        <div id="col-1">
+          <h2>Discount or No?</h2>
+          <br />
+          <label>
+            <h5>choose the day you will be going:</h5>
+            <div
+              class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+            >
+              <select class="mdl-textfield__input" id="day" name="day">
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+              </select>
+              <label class="mdl-textfield__label" for="day">day</label>
+            </div>
+          </label>
+          <br />
+          <h5>how old are you?</h5>
+          <!-- Numeric Textfield with Floating Label -->
+          <form action="#">
+            <div
+              class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+            >
+              <input
+                class="mdl-textfield__input"
+                type="text"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="age"
+              />
+              <label class="mdl-textfield__label" for="age">age...</label>
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+          </form>
+          <br />
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="myButtonClicked()"
+          >
+            button
+          </button>
+          <div id="answer"></div>
+        </div>
+        <div id="col-2">
+        </div>
       </main>
     </div>
   </body>
